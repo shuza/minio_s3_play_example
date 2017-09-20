@@ -1,3 +1,5 @@
+<snippet>
+  <content>
 # Minio-Play-Rest-API
 Rest API for Minio  (AWS S3 complitible object storge service)
 
@@ -5,3 +7,6 @@ Rest API for Minio  (AWS S3 complitible object storge service)
   - Request validation using oAuth
   - Create Bucket
   - Create Object
+
+</snippet>
+  </content>
