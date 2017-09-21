@@ -3,14 +3,20 @@
 # ~~~~
 
 # Home page
-GET         /                                                 controllers.HomeController.index()
+GET           /                                                 controllers.HomeController.index()
 
+
+###     Managing Bucket
+POST          /api/v1/bucket/create                             controllers.MinioBucketController.create()
+GET           /api/v1/bucket/list                               controllers.MinioBucketController.list()
+DELETE        /api/v1/bucket/remove/:bucketName                 controllers.MinioBucketController.remove(bucketName: String)
+GET           /api/v1/bucket/create/:bucketName                 controllers.MinioBucketController.check(bucketName: String)
 
 ###     Managing User
-POST        /api/v1/user/create                               controllers.UserController.create()
-POST        /api/v1/user/login                                controllers.AuthController.login()
-GET         /api/v1/user/logout/:userHash/:accessToken        controllers.AuthController.logout(userHash: String, accessToken: String)
+POST          /api/v1/user/create                               controllers.UserController.create()
+POST          /api/v1/user/login                                controllers.AuthController.login()
+GET           /api/v1/user/logout/:userHash/:accessToken        controllers.AuthController.logout(userHash: String, accessToken: String)
 
 
 # Map static resources from the /public folder to the /assets URL path
-GET         /assets/*file                                     controllers.Assets.versioned(path="/public", file: Asset)
+GET           /assets/*file                                     controllers.Assets.versioned(path="/public", file: Asset)
